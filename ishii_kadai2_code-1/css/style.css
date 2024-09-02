@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+/* cssリセット */
+
+/*利用するタグによってこちらの内容は増やす*/
+
+html,
+body h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  /*デフォルトの文字色、font-familyを予め当てておく*/
+  color: #000;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
+a {
+  /*下線を消す*/
+  text-decoration: none;
+  /*色を消す*/
+  color: inherit;
+}
+
+ul {
+  /*左の「・」を消す*/
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+  border: none;
+}
+
+/*--------------------------以下自分の記述--------------------------*/
+
+header {
+  max-width: 767px;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  margin: 30px 0px 10px 0px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.t1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  gap: 50px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -25px;
+  top: -2px;
+  height: 150%;
+  border-right: 1px solid black;
+}
+
+@media screen and (max-width: 767px) {
+  /*　画面サイズ 767px以下になったらここに書いてあるcssが適用される　*/
+
+  .title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .t1 {
+    color: #4e4e4e;
+    font-size: 50px;
+    padding: 0px 0px 10px 0px;
+  }
+
+  nav ul {
+    flex-direction: column; /*縦並びに*/
+    gap: 10px;
+    font-size: 20px;
+  }
+
+  nav ul li {
+    margin: 2px;
+    padding-bottom: 15px;
+    color: #5f5f5f;
+    border-bottom: 2px solid #5f5f5f;
+    width: 700px;
+  }
+
+  nav ul li:not(:last-child)::after {
+    border-right: none;
+  }
+}
