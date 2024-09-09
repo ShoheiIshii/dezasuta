@@ -67,7 +67,7 @@ h1 {
   font-size: 12px;
   width: 100%;
   margin-top: 30px;
-  flex-wrap: wrap; /* レスポンシブ対応のためにカードを折り返す */
+  flex-wrap: wrap; /*このコードでも今回のスマホ縦並びの実現は可能でしょうか？*/
 }
 
 .service {
