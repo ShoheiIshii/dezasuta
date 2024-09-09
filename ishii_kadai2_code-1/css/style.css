@@ -105,6 +105,10 @@ nav ul li:not(:last-child) {
     padding: 0px 0px 10px 0px;
   }
 
+  .na {
+    width: 100%;
+  }
+
   nav ul {
     flex-direction: column; /*縦並びに*/
     gap: 10px;
