@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+/* cssリセット */
+
+/*利用するタグによってこちらの内容は増やす*/
+
+html,
+body h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  /*デフォルトの文字色、font-familyを予め当てておく*/
+  color: #000;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
+a {
+  /*下線を消す*/
+  text-decoration: none;
+  /*色を消す*/
+  color: inherit;
+}
+
+ul {
+  /*左の「・」を消す*/
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+  border: none;
+}
+
+/*--------------------------ここから下が課題箇所です。ご確認お願いいたします！--------------------------*/
+
+body {
+  background-color: #eeeeee;
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+
+  font-size: 20px;
+  margin: 0px 0px 30px 0px;
+}
+
+.layout {
+  padding: 30px 10px 0px 10px;
+}
+
+.service123 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  width: 100%;
+  margin-top: 30px;
+  flex-wrap: wrap; /* レスポンシブ対応のためにカードを折り返す */
+}
+
+.service {
+  background-color: white;
+  width: 32%;
+}
+
+.service img {
+  width: 100%;
+}
+
+.service h3 {
+  border-left: 6px solid rgb(131, 131, 131);
+  color: rgb(131, 131, 131);
+  font-size: 22px;
+  padding-left: 5px;
+  margin: 10px 0px 13px 10px;
+}
+
+.service p {
+  color: #1f1f1f;
+  margin: 7px 0px 10px 7px;
+  font-size: 17px;
+}
+
+/* スマホのレスポンシブ */
+@media (max-width: 400px) {
+  .service123 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .layout {
+    box-sizing: border-box;
+  }
+}
