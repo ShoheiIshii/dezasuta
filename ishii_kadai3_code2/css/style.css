@@ -96,7 +96,7 @@ h1 {
 /* スマホのレスポンシブ */
 @media (max-width: 400px) {
   .service123 {
-    flex-direction: column;
+    /* flex-direction: column;*/
     align-items: center;
   }
 
