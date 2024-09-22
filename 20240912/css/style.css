@@ -203,10 +203,9 @@ header {
 }
 
 .event_items {
-  border: 2px solid #4f260b;
-  padding: 10px;
+  border: 3px solid #4f260b;
+  padding: 38px 167px 37px 157px;
   background-color: #fff;
-  max-width: 600px;
   margin: 20px auto; /* 上下に余白、中央揃え */
 }
 
