@@ -132,6 +132,7 @@ header {
 }
 .about_us img {
   width: 500px;
+  border-radius: 0 0 82px 0; /* 角を丸くする */
 }
 .about_us h2 img {
   width: 272px;
@@ -161,6 +162,7 @@ header {
 }
 
 .menu_items img {
+  border-radius: 0 42px 0 0; /* 角を丸くする */
   width: 300px;
 }
 
@@ -172,7 +174,7 @@ header {
 /*-------------------GALLERY----------------------*/
 
 .gallery h2 {
-  width: 1000px;
+  width: 245px;
   text-align: center;
   padding: 0 459px 0 453px;
   margin-bottom: 17px;
@@ -181,27 +183,35 @@ header {
 .gallery_items {
   display: flex;
   justify-content: space-between;
-  width: 1920px;
+  max-width: 1920px;
   /* overflow-x: auto; */
 }
 
 /*-------------------EVENT-----------------------*/
 
 .event {
-  width: 1000px;
+  max-width: 1000px;
   padding: 0 459px 0 453px;
 }
 
-.event img {
+.event h2 {
   width: 174px;
+  text-align: center;
 }
 
 .event ul li {
-  display: flex;
+  display: flex; /*なぜか横並びになりません、、、、、*/
   justify-content: space-between;
+  text-align: center;
 }
 
 /*-------------------ACCESS MAP-------------------*/
+
+.access_map_items h2 {
+  max-width: 1000px;
+  padding: 0 459px 0 453px;
+  text-align: center;
+}
 
 .access_map iframe {
   display: block;
@@ -219,11 +229,27 @@ header {
   display: flex;
   justify-content: center;
   background-color: #fff;
-  display: flex;
 }
 
 .footer img {
   width: 227px;
+}
+
+/*-------------------PAGE TOP----------------------*/
+
+.page_top {
+  position: fixed; /* 固定位置にする */
+  bottom: 20px; /* 下からの距離 */
+  right: 20px; /* 右からの距離 */
+  padding: 10px 15px; /* 内側の余白 */
+  background-color: #333; /* 背景色 */
+  color: white; /* テキスト色 */
+  text-decoration: none; /* 下線を消す */
+  border-radius: 5px; /* 角を丸くする */
+}
+
+.page_top:hover {
+  background-color: #555; /* ホバー時の背景色 */
 }
 
 /* -----------------★スマホ版メニュー---------------------*/
