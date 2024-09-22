@@ -130,7 +130,7 @@ header {
   align-items: center;
   padding: 0 0 96px 0;
 }
-.about_us img {
+.about_us_main img {
   width: 500px;
   border-radius: 0 0 82px 0; /* 角を丸くする */
 }
@@ -171,6 +171,14 @@ header {
   flex-direction: column;
 }
 
+.items123 h3 {
+  font-size: 38px;
+}
+
+.items123 p {
+  font-size: 17px;
+}
+
 /*-------------------GALLERY----------------------*/
 
 .gallery h2 {
@@ -203,6 +211,7 @@ header {
   display: flex; /*なぜか横並びになりません、、、、、*/
   justify-content: space-between;
   text-align: center;
+  font-size: 23px;
 }
 
 /*-------------------ACCESS MAP-------------------*/
@@ -244,6 +253,7 @@ header {
   position: fixed; /* 固定位置に */
   bottom: 230px; /* 下からの距離 */
   right: 309px; /* 右からの距離 */
+  cursor: pointer;
 }
 
 /* -----------------★スマホ版メニュー---------------------*/
