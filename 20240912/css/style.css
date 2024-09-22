@@ -229,7 +229,8 @@ header {
   display: flex;
   justify-content: center;
   background-color: #fff;
-  padding-top: 393px;
+  height: 393px;
+  font-size: 20px;
 }
 
 .footer img {
@@ -240,7 +241,7 @@ header {
 
 .page_top {
   width: 125px;
-  position: fixed; /* 固定位置にする */
+  position: fixed; /* 固定位置に */
   bottom: 230px; /* 下からの距離 */
   right: 309px; /* 右からの距離 */
 }
