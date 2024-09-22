@@ -229,6 +229,7 @@ header {
   display: flex;
   justify-content: center;
   background-color: #fff;
+  padding-top: 393px;
 }
 
 .footer img {
@@ -238,18 +239,10 @@ header {
 /*-------------------PAGE TOP----------------------*/
 
 .page_top {
+  width: 125px;
   position: fixed; /* 固定位置にする */
-  bottom: 20px; /* 下からの距離 */
-  right: 20px; /* 右からの距離 */
-  padding: 10px 15px; /* 内側の余白 */
-  background-color: #333; /* 背景色 */
-  color: white; /* テキスト色 */
-  text-decoration: none; /* 下線を消す */
-  border-radius: 5px; /* 角を丸くする */
-}
-
-.page_top:hover {
-  background-color: #555; /* ホバー時の背景色 */
+  bottom: 230px; /* 下からの距離 */
+  right: 309px; /* 右からの距離 */
 }
 
 /* -----------------★スマホ版メニュー---------------------*/
