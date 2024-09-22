@@ -206,7 +206,7 @@ header {
   border: 3px solid #4f260b;
   padding: 38px 167px 37px 157px;
   background-color: #fff;
-  margin: 20px auto; /* 上下に余白、中央揃え */
+  margin: 20px auto; /* 上下に余白、 中央揃え */
 }
 
 .event h2 {
