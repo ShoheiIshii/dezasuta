@@ -143,6 +143,7 @@ header {
 }
 .about_us p {
   font-size: 16px;
+  line-height: 26px;
 }
 
 /* ------------------MENU----------------------- */
@@ -220,8 +221,14 @@ header {
   margin-bottom: 23px; /* 各項目の間隔 */
 }
 
-.news-content {
+li:last-child {
+  margin-bottom: 0; /* 最後の項目だけ間隔をなくす */
+}
+
+.list-content {
   padding-left: 47px; /*日付との間隔 */
+  letter-spacing: -0.1em; /* 文字間を狭める　メトリクスに対応 */
+  border-bottom: 1px solid #4f260b;
 }
 
 /*-------------------ACCESS MAP-------------------*/
