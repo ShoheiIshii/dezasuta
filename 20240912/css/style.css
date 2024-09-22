@@ -108,12 +108,17 @@ header {
 
 .main_copy {
   text-align: center;
-  padding: 104px 0;
+  padding: 104px 0 93px 0;
 }
 
+.english {
+  padding: 0 0 47px 0;
+}
 .main_copy h1 {
+  max-width: 960px;
   font-size: 82px;
-  color: #d30202;
+  line-height: 1.3em;
+  padding-bottom: 50px;
 }
 
 .english {
@@ -235,7 +240,8 @@ li:last-child {
 }
 
 .list-content {
-  letter-spacing: -0.1em; /* 文字間を狭める　メトリクスに対応 */
+  white-space: nowrap;
+  /*letter-spacing: -0.1em; /* 文字間を狭める　メトリクスに対応 */
   border-bottom: 1px solid #4f260b;
   display: inline-block;
   padding-bottom: 2px;
