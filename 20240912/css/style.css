@@ -53,10 +53,11 @@ img {
   border: none;
 }
 
-/*-------------------ヘッダー--------------------*/
 body {
   background: #e8d9bf;
 }
+
+/*-------------------ヘッダー--------------------*/
 
 header {
   position: relative; /*相対 親要素ヘッダー内を基準に指定*/
@@ -171,22 +172,25 @@ header {
 /*-------------------GALLERY----------------------*/
 
 .gallery h2 {
+  width: 1000px;
   text-align: center;
+  padding: 0 459px 0 453px;
   margin-bottom: 17px;
-}
-
-.gallery img {
-  width: 245px;
 }
 
 .gallery_items {
   display: flex;
   justify-content: space-between;
-  /* max-width: 100%; */
-  /* width: 384px; */
+  width: 1920px;
+  /* overflow-x: auto; */
 }
 
 /*-------------------EVENT-----------------------*/
+
+.event {
+  width: 1000px;
+  padding: 0 459px 0 453px;
+}
 
 .event img {
   width: 174px;
@@ -222,7 +226,7 @@ header {
   width: 227px;
 }
 
-/* ------------------------★スマホ版メニュー------------------------------*/
+/* -----------------★スマホ版メニュー---------------------*/
 .sp_nav {
   display: none;
 }
