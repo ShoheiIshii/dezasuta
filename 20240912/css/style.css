@@ -160,20 +160,17 @@ header {
 }
 
 #menu_items {
-  max-width: 300px;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  margin: 39px 0 84px 0;
 }
 
 .menu h2 {
   text-align: center;
 }
 
-.menu_items {
-  display: flex;
-  justify-content: space-between;
-  margin: 39px 0 84px 0;
-}
-
-.menu_items img {
+.items_list img {
   width: 100%;
   border-radius: 0 42px 0 0; /* 角を丸くする */
 }
@@ -192,6 +189,8 @@ header {
 }
 
 .items_list p {
+  font-weight: normal;
+  letter-spacing: -0.05em;
   font-size: 17px;
   width: 300px;
 }
@@ -199,10 +198,17 @@ header {
 /*-------------------GALLERY----------------------*/
 
 .gallery h2 {
-  width: 245px;
+  width: 1000px;
   text-align: center;
   padding: 0 459px 0 453px;
   margin-bottom: 17px;
+}
+
+#gallery_logo {
+  margin: auto;
+}
+.gallery_logo img {
+  width: 245px;
 }
 
 .gallery_items {
@@ -217,6 +223,7 @@ header {
 .event {
   max-width: 1000px;
   padding: 0 459px 0 453px;
+  text-align: center;
 }
 
 .event_items {
@@ -275,14 +282,19 @@ li:last-child {
 
 .footer {
   display: flex;
-  justify-content: center;
   background-color: #fff;
   height: 393px;
   font-size: 20px;
 }
 
+.footer_logo {
+  max-width: 1000px;
+  justify-content: flex-start;
+}
+
 .footer img {
   width: 227px;
+  padding-top: 74px;
 }
 
 /*-------------------PAGE TOP----------------------*/
