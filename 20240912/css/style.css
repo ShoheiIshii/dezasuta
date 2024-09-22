@@ -113,6 +113,7 @@ header {
 
 .main_copy h1 {
   font-size: 82px;
+  color: #d30202;
 }
 
 .english {
@@ -167,16 +168,20 @@ header {
   width: 300px;
 }
 
-.items123 {
+.items_list {
   display: flex;
   flex-direction: column;
 }
 
-.items123 h3 {
+.items_list h3 {
   font-size: 38px;
+  font-weight: normal;
+  color: #d30202;
+  margin: -9px 0 0.5em 0.4em;
+  /* line-height: 0.7em; */
 }
 
-.items123 p {
+.items_list p {
   font-size: 17px;
 }
 
@@ -225,10 +230,15 @@ li:last-child {
   margin-bottom: 0; /* 最後の項目だけ間隔をなくす */
 }
 
+.date {
+  padding-right: 47px; /*日付との間隔 */
+}
+
 .list-content {
-  padding-left: 47px; /*日付との間隔 */
   letter-spacing: -0.1em; /* 文字間を狭める　メトリクスに対応 */
   border-bottom: 1px solid #4f260b;
+  display: inline-block;
+  padding-bottom: 2px;
 }
 
 /*-------------------ACCESS MAP-------------------*/
