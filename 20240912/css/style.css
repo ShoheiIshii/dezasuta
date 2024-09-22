@@ -202,16 +202,27 @@ header {
   padding: 0 459px 0 453px;
 }
 
+.event_items {
+  border: 2px solid #4f260b;
+  padding: 10px;
+  background-color: #fff;
+  max-width: 600px;
+  margin: 20px auto; /* 上下に余白、中央揃え */
+}
+
 .event h2 {
   width: 174px;
   text-align: center;
 }
 
-.event ul li {
-  display: flex; /*なぜか横並びになりません、、、、、*/
-  justify-content: space-between;
-  text-align: center;
+.event_list li {
+  display: flex;
   font-size: 23px;
+  margin-bottom: 23px; /* 各項目の間隔 */
+}
+
+.news-content {
+  padding-left: 47px; /*日付との間隔 */
 }
 
 /*-------------------ACCESS MAP-------------------*/
