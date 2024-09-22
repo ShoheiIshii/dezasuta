@@ -1,0 +1,299 @@
+@charset "utf-8";
+
+/* cssリセット */
+
+/*利用するタグによってこちらの内容は増やす*/
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  /*デフォルトの文字色、font-familyを予め当てておく*/
+  color: #4f260b;
+  /*font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif*/
+
+  font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+    "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+    "ＭＳ 明朝", serif;
+}
+
+a {
+  /*下線を消す*/
+  text-decoration: none;
+  /*色を消す*/
+  color: inherit;
+  transition: 0.25s;
+}
+
+a:hover {
+  /*ホバー時の文字アクション設定*/
+  opacity: 0.75;
+  /*color: #ff8800; */
+}
+
+ul {
+  /*左の「・」を消す*/
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+  border: none;
+}
+
+/*-----------------------------------------------------------------*/
+
+body {
+  background: #e8d9bf;
+}
+
+header {
+  position: relative; /*相対 親要素ヘッダー内を基準に指定*/
+}
+
+.header_wrap {
+  display: flex;
+  justify-content: space-between; /*左右揃える*/
+  align-items: center; /*上下中央に揃える*/
+  padding: 0% 7% 0% 3%;
+  position: absolute; /*絶対 今回は親要素relative指定のためヘッダー内で絶対的に指定
+  また、横幅が指定したdivから浮いた状態になるため再指定必須*/
+  top: 0;
+  left: 0;
+  width: 100%; /*再指定*/
+  box-sizing: border-box; /*上記の影響で、padding指定した子要素がはみ出るため、含めた指定が必要*/
+}
+
+.pc_nav ul {
+  display: flex;
+  gap: 54px;
+}
+
+.pc_nav ul li {
+  color: #fff;
+  width: 105px;
+  text-align: center;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/*--------------------------------------*/
+
+.content_width {
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 459px 0 453px;
+}
+
+.main_copy {
+  text-align: center;
+  padding: 104px 0;
+}
+
+.main_copy h1 {
+  font-size: 82px;
+}
+
+.english {
+  font-size: 30px;
+}
+.concept {
+  font-size: 23px;
+}
+
+.header_logo {
+  width: 226px;
+}
+
+/* --------------------------------- */
+
+.about_us {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 96px 0;
+}
+.about_us img {
+  width: 500px;
+}
+.about_us h2 img {
+  width: 272px;
+}
+
+.about_us h3 {
+  font-size: 44px;
+}
+.about_us p {
+  font-size: 16px;
+}
+
+/* --------------------------------------- */
+
+.menu img {
+  width: 151px;
+}
+
+.menu h2 {
+  text-align: center;
+  margin-bottom: 39px;
+}
+
+.menu_items {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu_items img {
+  width: 300px;
+}
+
+.items123 {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo4 {
+  width: 245px;
+}
+
+.gallery {
+  display: flex;
+  width: 100%;
+}
+
+.logo5 {
+  width: 174px;
+}
+
+.event ul li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.access_map iframe {
+  display: block;
+  width: 100%;
+  height: 470px;
+}
+
+.logo6 {
+  width: 214px;
+}
+.footer {
+  justify-content: center;
+  background-color: #fff;
+  display: flex;
+}
+
+.logo7 {
+  width: 227px;
+}
+
+/* ------------------------スマホ版メニュー------------------------------*/
+.sp_nav {
+  display: none;
+}
+
+@media screen and (max-width: 1100px) {
+  .pc_nav {
+    display: none;
+  }
+
+  .sp_btn {
+    display: block;
+    height: 23px;
+    cursor: pointer;
+    top: 20px;
+    left: 25px;
+    z-index: 2; /*positionが指定されてるものに適用可能 数字は順位がつけられれば良い任意*/
+  }
+
+  .sp_btn span {
+    /*親要素*/
+    display: block;
+    width: 33px;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    /* 位置の調整 */
+    position: relative;
+    top: 10px;
+    transition: 0.3s;
+  }
+
+  .sp_btn span::before, /*2つの子要素*/
+  .sp_btn span::after {
+    content: "";
+    display: block;
+    width: 33px;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    /*位置の調整*/
+    position: absolute;
+    transition: 0.3s;
+  }
+
+  .sp_btn span::before {
+    bottom: 10px;
+  }
+
+  .sp_btn span::after {
+    top: 10px;
+  }
+}
+
+.sp_btn.open span {
+  background-color: transparent;
+}
+
+.sp_btn.open span::before {
+  bottom: 0; /*指定した位置を真ん中に戻す*/
+  transform: rotate(45deg);
+}
+
+.sp_btn.open span::after {
+  top: 0; /*指定した位置を真ん中に戻す*/
+  transform: rotate(-45deg); /*135もOK*/
+}
+
+.sp_nav {
+  position: absolute; /*ここの指定で一層浮くから※注意*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8); /*最後のaはαで透過度80%*/
+  z-index: 1; /*positionが指定されてるものに適用可能*/
+}
+
+.sp_nav ul {
+  display: flex;
+  flex-direction: column; /*縦並びに*/
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 30px; /*justify-contentなどの場合で使い、並び順の間隔を調節できるもの*/
+}
+
+.sp_nav ul li {
+  color: #fff;
+  font-size: 18px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
