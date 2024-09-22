@@ -197,6 +197,15 @@
     </a>
 
 
+    <script>  /ここのjava scriptは全てコピペしたのでまだ理解できていません最後に確認したいです/
+        document.querySelector('.page_top').addEventListener('click', function (e) {
+            e.preventDefault();  // デフォルトのリンク動作を無効化
+            window.scrollTo({
+                top: 0,            // ページトップ
+                behavior: 'smooth' // スムーズスクロール
+            });
+        });
+    </script>
 
     <script>
         $(function () {
