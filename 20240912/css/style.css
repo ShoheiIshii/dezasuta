@@ -26,6 +26,8 @@ li {
   font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
     "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
     "ＭＳ 明朝", serif;
+
+  scroll-behavior: smooth;
 }
 
 a {
@@ -45,12 +47,15 @@ a:hover {
 ul {
   /*左の「・」を消す*/
   list-style: none;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 img {
   max-width: 100%;
   vertical-align: bottom;
   border: none;
+  width: 100%;
 }
 
 body {
@@ -61,6 +66,7 @@ body {
 
 header {
   position: relative; /*相対 親要素ヘッダー内を基準に指定*/
+  width: 100%;
 }
 
 .header_logo {
@@ -98,10 +104,11 @@ header {
 /*----------------GALLERYまで-------------------*/
 
 .content_width {
-  width: 1000px;
+  max-width: 1000px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  padding: 0 459px 0 453px;
+  /* padding: 0 459px 0 453px; 　ミス*/
 }
 
 /*----------------メインコピー-------------------*/
@@ -115,10 +122,14 @@ header {
 
 .english {
   padding: 0 0 47px 0;
+  font-feature-settings: "palt"; /*メトリクス*/
 }
-.main_copy h1 {
+
+#happy {
   font-size: 82px;
-  line-height: 1.3em;
+  line-height: 96px;
+  font-feature-settings: "palt"; /*メトリクス*/
+  letter-spacing: 0.1em; /*トラッキング*/
   padding-bottom: 50px;
 }
 
@@ -127,6 +138,9 @@ header {
 }
 .concept {
   font-size: 23px;
+  line-height: 38px;
+  letter-spacing: 0.1em;
+  font-feature-settings: "palt"; /*メトリクス*/
 }
 
 /* ------------------ABOUT US------------------- */
@@ -134,23 +148,30 @@ header {
 .about_us {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 0 0 96px 0;
 }
 .about_us_main img {
-  width: 500px;
+  width: 100%;
   border-radius: 0 0 82px 0; /* 角を丸くする */
 }
 .about_us h2 img {
+  padding-top: 46px; /*150-104=46 上のpadding分を引く*/
   width: 272px;
 }
 
 .about_us h3 {
   font-size: 44px;
+  font-feature-settings: "palt"; /*メトリクス*/
+  line-height: 61px;
+  width: 100%;
+  padding: 48px 0 23px 0;
 }
 .about_us p {
   font-size: 16px;
   line-height: 26px;
+  font-feature-settings: "palt"; /*メトリクス*/
+  text-align: justify; /* 均等配置 */
+  text-align-last: left; /* 最終行を左揃え */
 }
 
 /* ------------------MENU----------------------- */
@@ -178,6 +199,7 @@ header {
 .items_list {
   display: flex;
   flex-direction: column;
+  width: 30%;
 }
 
 .items_list h3 {
@@ -192,49 +214,49 @@ header {
   font-weight: normal;
   letter-spacing: -0.05em;
   font-size: 17px;
-  width: 300px;
 }
 
 /*-------------------GALLERY----------------------*/
 
 .gallery h2 {
-  width: 1000px;
+  width: 100%;
+  margin: 0 auto;
   text-align: center;
-  padding: 0 459px 0 453px;
-  margin-bottom: 17px;
-}
-
-#gallery_logo {
-  margin: auto;
-}
-.gallery_logo img {
+  padding: 0 0 17px 0;
   width: 245px;
 }
 
 .gallery_items {
   display: flex;
   justify-content: space-between;
-  max-width: 1920px;
+  margin: 0 auto;
   /* overflow-x: auto; */
+}
+
+.gallery_items img {
+  width: 20%;
 }
 
 /*-------------------EVENT-----------------------*/
 
 .event {
   max-width: 1000px;
-  padding: 0 459px 0 453px;
+  margin: auto;
   text-align: center;
 }
 
 .event_items {
   border: 3px solid #4f260b;
-  padding: 38px 167px 37px 157px;
+  padding: 38px 0 37px 0;
+
   background-color: #fff;
-  margin: 20px auto; /* 上下に余白、 中央揃え */
+  margin: 0 auto; /* 上下に余白、 中央揃え */
 }
 
 .event h2 {
   width: 174px;
+  padding: 59px 0 29px 0;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -264,7 +286,7 @@ li:last-child {
 
 .access_map_items h2 {
   max-width: 1000px;
-  padding: 0 459px 0 453px;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -276,25 +298,47 @@ li:last-child {
 
 .access_map img {
   width: 214px;
+  padding: 68px 0 37px 0;
 }
 
 /*-------------------FOOTER----------------------*/
 
 .footer {
-  display: flex;
   background-color: #fff;
   height: 393px;
   font-size: 20px;
 }
 
-.footer_logo {
+.footer_content {
   max-width: 1000px;
-  justify-content: flex-start;
+  width: 100%;
+
+  display: flex;
+  /* justify-content: flex-start; */
+  margin: 0 auto;
 }
 
-.footer img {
+.footer_logo {
+  padding: 74px 65px 0 0;
   width: 227px;
-  padding-top: 74px;
+}
+
+.footer_items {
+  padding-top: 78px;
+  font-feature-settings: "palt"; /*メトリクス*/
+}
+
+.footer_items p {
+  line-height: 39px;
+}
+
+#CAFE {
+  position: relative;
+  /* bottom: 50px; */
+  top: 74px;
+  left: 124px;
+  font-size: 16px;
+  line-height: 35px;
 }
 
 /*-------------------PAGE TOP----------------------*/

@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <div class="header_slider">
             <div>
                 <picture>
@@ -56,13 +56,13 @@
 
     <div class="content_width">
 
-        <section class="main_copy">
+        <div class="main_copy">
             <p class="english">Have a happy day From a cup of coffee.</p>
-            <h1>ハッピーに溢れる1日を<br>
-                1杯のコーヒーから。</h1>
+            <p id="happy">ハッピーに溢れる1日を<br>
+                1杯のコーヒーから。</p>
             <p class="concept">毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ<br>
                 足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。</p>
-        </section>
+        </div>
 
 
         <section class="about_us">
@@ -78,15 +78,15 @@
                 </h2>
 
 
-                <h3> 私たちが提供するこだわりのコーヒー</h3>
+                <h3> 私たちが提供する<br>こだわりのコーヒー</h3>
                 <p>サービスを提供する上での想いや心がけていることなど、
-                    メッセージを文章で紹介します。サービスを提供する上
-                    での想いや心がけていることなど、メッセージを文章で
-                    紹介します。サービスを提供する上での想いや心がけて
-                    いることなど、メッセージを文章で紹介します。サービ
-                    スを提供する上での想いや心がけていることなど、メッ
-                    セージを文章で紹介します。サービスを提供する上での
-                    想いや心がけていることなど、メッセージを文章で紹介
+                    メッ<br>セージを文章で紹介します。サービスを提供する上
+                    での想い<br>や心がけていることなど、メッセージを文章で
+                    紹介します。サー<br>ビスを提供する上での想いや心がけて
+                    いることなど、メッセー<br>ジを文章で紹介します。サービ
+                    スを提供する上での想いや心<br>がけていることなど、メッ
+                    セージを文章で紹介します。サービス<br>を提供する上での
+                    想いや心がけていることなど、メッセージを<br>文章で紹介
                     します。
                 </p>
             </div>
@@ -184,27 +184,31 @@
 
     <section class="footer">
 
-        <div class="footer_logo">
-            <img src="images/design_cafe_logo_footer@2x.png" alt="DESIGN CAFE">
-        </div>
+        <div class="footer_content">
 
-        <div class="footer_items">
-            <p>OPEN 18:00 / CLOSE 24:00</p>
-            <p>〒150-0022</p>
-            <p>東京都渋谷区東京南123デザインビルB1</p>
-            <p>MAIL：info@designcafe.tokyo</p>
-            <p>© 2021 DESIGN CAFE</p>
+            <h2 class="footer_logo">
+                <img src="images/design_cafe_logo_footer@2x.png" alt="DESIGN CAFE">
+            </h2>
+
+            <div class="footer_items">
+                <p>OPEN 18:00 / CLOSE 24:00<br>
+                    〒150-0022<br>
+                    東京都渋谷区東京南123デザインビルB1<br>
+                    MAIL：info@designcafe.tokyo</p>
+                <p id="CAFE">© 2021 DESIGN CAFE</p>
+            </div>
+
         </div>
 
     </section>
 
 
-    <a href="#" class="page_top">
+    <a href="#header" class="page_top">
         <img src="images/to_top@2x.png" alt="PAGE TOP">
     </a>
 
 
-    <script>  /*ここのjava scriptは全てコピペしたのでまだ理解できていません最後に確認したいです*/
+    <!-- <script>  /*JavaScript*/
         document.querySelector('.page_top').addEventListener('click', function (e) {
             e.preventDefault();  // デフォルトのリンク動作を無効化
             window.scrollTo({
@@ -212,7 +216,7 @@
                 behavior: 'smooth' // スムーズスクロール
             });
         });
-    </script>
+    </script> -->
 
     <script>
         $(function () {
