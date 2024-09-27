@@ -359,7 +359,6 @@ li:last-child {
 .page_top {
   width: 125px;
   /* position: fixed; 固定位置に */
-  position: absolute;
   bottom: 1px; /*下からの距離 */
   /* right: 309px; 右からの距離 */
   cursor: pointer;
@@ -461,4 +460,15 @@ li:last-child {
   font-size: 18px;
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
     "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
+@media screen and (max-width: 767px) {
+  .pc_nav {
+    display: none;
+  }
+
+  .main_copy {
+    font-size: 17px;
+    margin-bottom: 22px;
+  }
 }
