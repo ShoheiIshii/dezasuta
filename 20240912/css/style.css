@@ -108,6 +108,7 @@ header {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  padding: 0 10px 0 10px;
   /* padding: 0 459px 0 453px; 　ミス*/
 }
 
@@ -149,21 +150,27 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 0 0 96px 0;
+  max-width: 1000px;
 }
 .about_us_main img {
-  width: 100%;
+  width: 50%;
   border-radius: 0 0 82px 0; /* 角を丸くする */
 }
+
+.about_us_content {
+  width: 41%;
+}
+
 .about_us h2 img {
   padding-top: 46px; /*150-104=46 上のpadding分を引く*/
   width: 272px;
 }
 
-.about_us h3 {
+#main_copy2 {
   font-size: 44px;
   font-feature-settings: "palt"; /*メトリクス*/
   line-height: 61px;
-  width: 100%;
+  width: 35%;
   padding: 48px 0 23px 0;
 }
 .about_us p {
@@ -218,6 +225,10 @@ header {
 
 /*-------------------GALLERY----------------------*/
 
+.gallery {
+  padding: 0 10px 0 10px;
+}
+
 .gallery h2 {
   width: 100%;
   margin: 0 auto;
@@ -243,6 +254,7 @@ header {
   max-width: 1000px;
   margin: auto;
   text-align: center;
+  padding: 0 10px 0 10px;
 }
 
 .event_items {
@@ -307,6 +319,7 @@ li:last-child {
   background-color: #fff;
   height: 393px;
   font-size: 20px;
+  padding: 0 10px 0 10px;
 }
 
 .footer_content {
@@ -345,11 +358,16 @@ li:last-child {
 
 .page_top {
   width: 125px;
-  position: fixed; /* 固定位置に */
-  bottom: 230px; /* 下からの距離 */
-  right: 309px; /* 右からの距離 */
+  /* position: fixed; 固定位置に */
+  position: absolute;
+  bottom: 1px; /*下からの距離 */
+  /* right: 309px; 右からの距離 */
   cursor: pointer;
 }
+
+/* .page_top img {
+  width: 125px;
+} */
 
 /* -----------------★スマホ版メニュー---------------------*/
 .sp_nav {
