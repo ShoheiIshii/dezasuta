@@ -5,8 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>designcafe</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 
 <body>
@@ -14,8 +18,14 @@
         <div class="header_slider">
             <div>
                 <picture>
-                    <source srcset="./images/sp_main_vs@2x-100/" media="(max-width:767px)">
+                    <source srcset="./images/sp_main_vs@2x-100.jpg" media="(max-width:767px)">
                     <img src="./images/pc_first-100.jpg" alt="店内の様子">
+                </picture>
+            </div>
+            <div>
+                <picture>
+                    <source srcset="./images/sp_main_vs_2@2x-100.jpg" media="(max-width:767px)">
+                    <img src="./images/slider_2.jpg" alt="店内の様子">
                 </picture>
             </div>
         </div>
@@ -64,6 +74,14 @@
                 足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。</p>
         </div>
 
+        <div class="main_copy_sp">
+            <p class="english">Have a happy day From a cup of coffee.</p>
+            <p id="happy">ハッピーに溢れる1日を<br>
+                1杯のコーヒーから。</p>
+            <p class="concept">毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ<br>
+                足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。</p>
+        </div>
+
 
         <section class="about_us">
 
@@ -71,17 +89,22 @@
                 <img src="./images/pc_about-100.jpg" alt="cafelatte_picture">
             </div>
 
+            <div class="about_us_main_sp">
+                <img src="./images/about_us@2x-100.jpg" alt="cafelatte_picture">
+            </div>
+
+
             <div class="about_us_content">
 
                 <h2>
                     <img src="./images/about_us@2x.png" alt="ABOUT US">
                 </h2>
 
-
                 <p id="main_copy2"> 私たちが提供する<br>こだわりのコーヒー</p>
                 <p>サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
                 </p>
             </div>
+
 
         </section>
 
@@ -132,6 +155,13 @@
             <img src="./images/pc_gallary_02-100.jpg" alt="GALLERY_picture4">
             <img src="./images/pc_gallary_01-100.jpg" alt="GALLERY_picture5">
         </div>
+
+        <div class="gallery_items_sp">
+            <img src="./images/mobile_gallery-100.jpg" alt="GALLERY_picture_sp">
+        </div>
+
+
+
     </section>
 
 
@@ -157,6 +187,8 @@
                     <span class="list-content">コーヒーの日で30％OFFイベントを開催［3日間限定］</span>
                 </li>
             </ul>
+
+
         </div>
     </section>
 
@@ -193,6 +225,22 @@
 
         </div>
 
+        <div class="footer_content_sp">
+
+            <h2 class="footer_logo_sp">
+                <img src="images/design_cafe_logo_footer@2x.png" alt="DESIGN CAFE">
+            </h2>
+
+            <div class="footer_items_sp">
+                <p>OPEN 18:00 / CLOSE 24:00<br>
+                    〒150-0022<br>
+                    東京都渋谷区東京南123デザインビルB1<br>
+                    MAIL：info@designcafe.tokyo</p>
+                <p id="CAFE_sp">© 2021 DESIGN CAFE</p>
+            </div>
+
+        </div>
+
     </section>
 
 
@@ -218,6 +266,14 @@
                 $('.sp_nav').fadeToggle();
 
             })
+
+            $('.header_slider').slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+                arrows: false,
+            })
+
         })
     </script>
 

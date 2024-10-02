@@ -152,8 +152,11 @@ header {
   padding: 0 0 96px 0;
   max-width: 1000px;
 }
-.about_us_main img {
+.about_us_main {
   width: 50%;
+}
+
+.about_us_main img {
   border-radius: 0 0 82px 0; /* 角を丸くする */
 }
 
@@ -170,7 +173,6 @@ header {
   font-size: 44px;
   font-feature-settings: "palt"; /*メトリクス*/
   line-height: 61px;
-  width: 35%;
   padding: 48px 0 23px 0;
 }
 .about_us p {
@@ -287,7 +289,7 @@ li:last-child {
 }
 
 .list-content {
-  white-space: nowrap;
+  white-space: nowrap; /*nowrapで折り返しなし*/
   /*letter-spacing: -0.1em; /* 文字間を狭める　メトリクスに対応 */
   border-bottom: 1px solid #4f260b;
   display: inline-block;
@@ -358,9 +360,9 @@ li:last-child {
 
 .page_top {
   width: 125px;
-  /* position: fixed; 固定位置に */
-  bottom: 1px; /*下からの距離 */
-  /* right: 309px; 右からの距離 */
+  position: fixed; /*固定位置に*/
+  bottom: 80px; /*下からの距離 */
+  right: 120px; /*右からの距離 */
   cursor: pointer;
 }
 
@@ -368,10 +370,28 @@ li:last-child {
   width: 125px;
 } */
 
-/* -----------------★スマホ版メニュー---------------------*/
+/* -----------------スマホ版をPCの時に非表示---------------------*/
+
 .sp_nav {
   display: none;
 }
+
+.main_copy_sp {
+  display: none;
+}
+.footer_content_sp {
+  display: none;
+}
+
+.about_us_main_sp {
+  display: none;
+}
+
+.gallery_items_sp {
+  display: none;
+}
+
+/* -----------------★スマホハンバーガーメニュー---------------------*/
 
 @media screen and (max-width: 1100px) {
   .pc_nav {
@@ -462,13 +482,216 @@ li:last-child {
     "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
 }
 
+.slick-dots {
+  bottom: 20px;
+}
+
+.slick-dots li.slick-active button:before,
+.slick-dots li button:before {
+  color: #fff;
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+
+/*----------------★スマホ767px以下表示★-------------------*/
+
 @media screen and (max-width: 767px) {
   .pc_nav {
     display: none;
   }
 
+  /*----------------スマホGALLERYまで-------------------*/
+
+  .content_width {
+    max-width: 767px;
+    margin: 0 auto;
+    /* display: flex; */
+    /* flex-direction: column; */
+    padding: 0px;
+  }
+
+  /*----------------スマホメインコピー-------------------*/
+
   .main_copy {
+    display: none;
+  }
+
+  .main_copy_sp {
+    text-align: center;
+    /* padding: 104px 0 93px 0; */
+  }
+
+  /*-------------------スマホabout-----------------------*/
+
+  .about_us_main {
+    display: none;
+  }
+
+  .about_us {
+    flex-direction: column;
+  }
+
+  .about_us_main_sp {
+    display: block;
+    width: 100%;
+  }
+
+  #main_copy2 {
+  }
+
+  /* ------------------スマホMENU----------------------- */
+
+  #menu_items {
+    max-width: 767px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    margin: 39px 0 84px 0;
+    gap: 55px;
+  }
+
+  .menu img {
+    width: 23%;
+  }
+
+  .menu h2 {
+    text-align: center;
+  }
+
+  .items_list img {
+    width: 100%;
+    border-radius: 0 42px 0 0; /* 角を丸くする */
+  }
+
+  .items_list {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .items_list h3 {
+    font-size: 40px;
+    font-weight: normal;
+    color: #d30202;
+    margin: -9px 0 18px 0.4em;
+    /* line-height: 0.7em; */
+  }
+
+  .items_list p {
+    font-weight: normal;
+    letter-spacing: -0.05em;
     font-size: 17px;
-    margin-bottom: 22px;
+  }
+
+  /*-------------------スマホGALLERY-----------------------*/
+
+  .gallery_items {
+    display: none;
+  }
+
+  .gallery_items_sp {
+    max-width: 767px;
+  }
+
+  .gallery_items_sp img {
+    width: 100%;
+  }
+
+  /* .gallery_items {
+    flex: 1 1 calc(50% - 10px);
+  }
+  .gallery_items:nth-child(n + 3) {
+    display: none;
+  } */
+
+  /*-------------------スマホEVENT-----------------------*/
+
+  .event {
+    max-width: 767px;
+    width: 100%;
+    margin: 0 auto;
+    /* padding: 0px; */
+  }
+
+  /* width: 767px; */
+
+  .event_list li {
+    padding-left: 28px;
+    padding-right: 9px;
+    flex-direction: column;
+    align-items: flex-start;
+    /* width: 78%; */
+  }
+
+  .list-content {
+    width: 78%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /*-------------------スマホACCESS----------------------*/
+
+  .access_map {
+    max-width: 767px;
+  }
+
+  .access_map_items h2 {
+    margin: 0 auto;
+    text-align: center;
+    width: 33%;
+  }
+
+  .access_map img {
+    padding: 26px 0 5px 0;
+  }
+
+  .access_map iframe {
+    display: block;
+    width: 100%;
+    height: 191px;
+  }
+
+  /*-------------------スマホFOOTER----------------------*/
+
+  .footer_content {
+    display: none;
+  }
+
+  .footer {
+    padding-left: 20px;
+    padding-right: 0px;
+  }
+
+  .footer_content_sp {
+    max-width: 767px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* margin: 0 auto; */
+    height: 322px;
+  }
+
+  .footer_logo_sp {
+    padding: 41px 128px 0 0;
+    text-align: center;
+    width: 277px;
+  }
+
+  .footer_items_sp {
+    padding-top: 28px;
+    font-feature-settings: "palt"; /*メトリクス*/
+  }
+
+  .footer_items_sp p {
+    line-height: 30px;
+  }
+
+  #CAFE_sp {
+    bottom: 0px;
+    text-align: center;
+    font-size: 18px;
   }
 }
