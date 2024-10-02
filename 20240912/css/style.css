@@ -376,6 +376,10 @@ li:last-child {
   display: none;
 }
 
+.concept_sp {
+  display: none;
+}
+
 .main_copy_sp {
   display: none;
 }
@@ -515,12 +519,37 @@ li:last-child {
   /*----------------スマホメインコピー-------------------*/
 
   .main_copy {
-    display: none;
+    max-width: 767px;
+
+    text-align: center;
+    padding: 41px 0 54px 0;
   }
 
-  .main_copy_sp {
-    text-align: center;
-    /* padding: 104px 0 93px 0; */
+  .english {
+    padding: 0 0 21px 0;
+    font-feature-settings: "palt"; /*メトリクス*/
+  }
+
+  #happy {
+    font-size: 38px;
+    line-height: 44px;
+    font-feature-settings: "palt"; /*メトリクス*/
+    letter-spacing: 0.02em; /*トラッキング*/
+    padding-bottom: 13px;
+  }
+
+  .english {
+    font-size: 17px;
+  }
+
+  .concept {
+    display: none;
+  }
+  .concept_sp {
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.1em;
+    font-feature-settings: "palt"; /*メトリクス*/
   }
 
   /*-------------------スマホabout-----------------------*/
@@ -536,9 +565,6 @@ li:last-child {
   .about_us_main_sp {
     display: block;
     width: 100%;
-  }
-
-  #main_copy2 {
   }
 
   /* ------------------スマホMENU----------------------- */
@@ -587,13 +613,12 @@ li:last-child {
   }
 
   /*-------------------スマホGALLERY-----------------------*/
+  .gallery {
+    max-width: 767px;
+  }
 
   .gallery_items {
     display: none;
-  }
-
-  .gallery_items_sp {
-    max-width: 767px;
   }
 
   .gallery_items_sp img {
