@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>疑似要素の例</title>
+    <style>
+        .example::before {
+            content: "始め: ";
+            color: blue;
+        }
+
+        .example::after {
+            content: " (終わり)";
+            color: red;
+        }
+
+        p::first-line {
+            font-weight: bold;
+        }
+
+        p::first-letter {
+            font-size: 1.5em;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="example">これは疑似要素のデモンストレーションです。</p>
+    <p>この段落の最初の行は太字になり、最初の文字は大きくて緑色になります。
+        これは2行目です。</p>
+</body>
+
+</html>

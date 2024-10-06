@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::after疑似要素を使用した改行</title>
+    <style>
+        /* 基本的な改行 */
+        .line-break::after {
+            content: "\A";
+            white-space: pre;
+        }
+
+        /* クラスを使って選択的に改行 */
+        .selective-break.break::after {
+            content: "\A";
+            white-space: pre;
+        }
+
+        /* 複数回の改行 */
+        .multiple-breaks::after {
+            content: "\A\A";
+
+            /* 2回の改行 */
+            white-space: pre;
+        }
+
+        /* 条件付き改行 */
+        @media (max-width: 600px) {
+            .responsive-break::after {
+                content: "\A";
+                white-space: pre;
+            }
+        }
+
+        /* スタイリングを含む改行 */
+        .styled-break::after {
+            content: "\A----------------------------------------\A";
+            white-space: pre;
+            color: #999;
+            font-size: 0.8em;
+        }
+
+        /* 共通スタイル */
+        .container {
+            width: 300px;
+            margin: 20px;
+            border: 1px solid #000;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>基本的な改行</h3>
+        <span class="line-break">この後に改行が入ります。</span>
+        <span>これは次の行です。</span>
+    </div>
+
+    <div class="container">
+        <h3>選択的な改行</h3>
+        <span class="selective-break">これは改行されません。</span>
+        <span class="selective-break break">この後に改行が入ります。</span>
+        <span>これは次の行です。</span>
+    </div>
+
+    <div class="container">
+        <h3>複数回の改行</h3>
+        <span class="multiple-breaks">この後に2回の改行が入ります。</span>
+        <span>これは3行目です。</span>
+    </div>
+
+    <div class="container">
+        <h3>条件付き改行（画面幅が600px以下で適用）</h3>
+        <span class="responsive-break">この後に改行が入ることがあります。</span>
+        <span>画面サイズによって位置が変わります。</span>
+    </div>
+
+    <div class="container">
+        <h3>スタイリングを含む改行</h3>
+        <span class="styled-break">この後に装飾された改行が入ります。</span>
+        <span>これは区切り線の下の行です。</span>
+    </div>
+</body>
+
+</html>

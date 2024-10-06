@@ -227,9 +227,10 @@ header {
 
 /*-------------------GALLERY----------------------*/
 
-.gallery {
+/* .gallery {
   padding: 0 10px 0 10px;
 }
+ */
 
 .gallery h2 {
   width: 100%;
@@ -239,15 +240,25 @@ header {
   width: 245px;
 }
 
-.gallery_items {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  /* overflow-x: auto; */
+@media (min-width: 768px) {
+  .gallery_items {
+    /* display: block; */
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    /* overflow-x: auto; */
+  }
+  .gallery_items img {
+    width: 100%;
+  }
+
+  .gallery_items_sp {
+    display: none;
+  }
 }
 
-.gallery_items img {
-  width: 20%;
+.lb-data .lb-number {
+  display: none !important;
 }
 
 /*-------------------EVENT-----------------------*/
@@ -376,24 +387,20 @@ li:last-child {
   display: none;
 }
 
-.concept_sp {
-  display: none;
-}
-
 .main_copy_sp {
   display: none;
 }
-.footer_content_sp {
+/* .footer_content_sp {
   display: none;
-}
+} */
 
 .about_us_main_sp {
   display: none;
 }
-
+/* 
 .gallery_items_sp {
   display: none;
-}
+} */
 
 /* -----------------★スマホハンバーガーメニュー---------------------*/
 
@@ -486,6 +493,8 @@ li:last-child {
     "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
 }
 
+/*----------------slick画像のカルーセル表示-------------------*/
+
 .slick-dots {
   bottom: 20px;
 }
@@ -497,6 +506,39 @@ li:last-child {
 
 .slick-dotted.slick-slider {
   margin-bottom: 0;
+}
+
+.slick-next {
+  right: 22%;
+}
+
+.slick-prev {
+  left: 22%;
+  z-index: 99;
+}
+.slick-next:before {
+  content: "";
+  display: block;
+  width: 20px; /*ここのwidthとheightの役割は？？？？ デベロッパで確認したところ>の範囲指定のこと？*/
+  height: 20px;
+  border-top: 4px solid #fff;
+  border-right: 4px solid #fff;
+  transform: rotate(45deg);
+}
+
+.slick-prev:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-top: 4px solid #fff;
+  border-left: 4px solid #fff;
+  transform: rotate(-45deg);
+}
+
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: 1;
 }
 
 /*----------------★スマホ767px以下表示★-------------------*/
@@ -542,15 +584,34 @@ li:last-child {
     font-size: 17px;
   }
 
-  .concept {
+  /* .concept br {
     display: none;
   }
-  .concept_sp {
+ */
+  .concept {
+    display: flex;
+    flex-direction: column;
     font-size: 16px;
     line-height: 30px;
     letter-spacing: 0.1em;
     font-feature-settings: "palt"; /*メトリクス*/
   }
+  /* 
+  .concept::before {
+    content: "";
+    display: block;
+  } */
+  /* 
+  .concept::after {
+    content: "足を運んでくれるお客さんには落ち着く空間と\Aこだわりのコーヒーを提供したい。";
+    white-space: pre;
+  } */
+
+  /*「\A」を使って「疑似要素内で記載した文章」をその時点で改行できる。文章途中に「\A」をはさむ度に改行可能！！そして、「white-space: pre;」の指定も必須！！！*/
+
+  /* .concept span {
+    display: none;
+  } */
 
   /*-------------------スマホabout-----------------------*/
 
@@ -560,11 +621,39 @@ li:last-child {
 
   .about_us {
     flex-direction: column;
+    justify-content: center;
+    padding-bottom: 0px;
+  }
+
+  .about_us_content {
+    width: 100%;
+  }
+
+  .about_us_content h2 {
+    width: 160px;
+    margin: 0 auto;
+    padding-bottom: 11px;
+  }
+
+  .about_us h2 img {
+    padding-top: 0px;
   }
 
   .about_us_main_sp {
     display: block;
     width: 100%;
+  }
+
+  #main_copy2 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 36px;
+    padding: 35px 18% 19px 5%;
+    line-height: 45px;
+  }
+
+  .about_us p {
+    padding: 0px 22px 45px 20px;
   }
 
   /* ------------------スマホMENU----------------------- */
@@ -580,7 +669,7 @@ li:last-child {
   }
 
   .menu img {
-    width: 23%;
+    width: 88px;
   }
 
   .menu h2 {
@@ -602,7 +691,7 @@ li:last-child {
     font-size: 40px;
     font-weight: normal;
     color: #d30202;
-    margin: -9px 0 18px 0.4em;
+    margin: -9px 0 18px 9px;
     /* line-height: 0.7em; */
   }
 
@@ -610,6 +699,7 @@ li:last-child {
     font-weight: normal;
     letter-spacing: -0.05em;
     font-size: 17px;
+    line-height: 27px;
   }
 
   /*-------------------スマホGALLERY-----------------------*/
@@ -617,12 +707,12 @@ li:last-child {
     max-width: 767px;
   }
 
-  .gallery_items {
-    display: none;
+  .gallery h2 {
+    width: 142px;
   }
 
-  .gallery_items_sp img {
-    width: 100%;
+  .gallery_items_sp {
+    display: block;
   }
 
   /* .gallery_items {
@@ -638,13 +728,26 @@ li:last-child {
     max-width: 767px;
     width: 100%;
     margin: 0 auto;
-    /* padding: 0px; */
+    padding: 0 20px 0 20px;
+    box-sizing: border-box;
   }
 
+  .event h2 {
+    width: 101px;
+    padding: 27px 16px;
+  }
   /* width: 767px; */
 
-  .event_list li {
+  .event_list {
+    font-size: 16px;
+    width: 100%;
     padding-left: 28px;
+    box-sizing: border-box;
+    margin: auto;
+  }
+
+  .event_list li {
+    font-size: 16px;
     padding-right: 9px;
     flex-direction: column;
     align-items: flex-start;
@@ -652,10 +755,10 @@ li:last-child {
   }
 
   .list-content {
-    width: 78%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    max-width: 100%;
   }
 
   /*-------------------スマホACCESS----------------------*/
@@ -667,7 +770,7 @@ li:last-child {
   .access_map_items h2 {
     margin: 0 auto;
     text-align: center;
-    width: 33%;
+    width: 124px;
   }
 
   .access_map img {
@@ -682,41 +785,60 @@ li:last-child {
 
   /*-------------------スマホFOOTER----------------------*/
 
-  .footer_content {
-    display: none;
-  }
-
   .footer {
-    padding-left: 20px;
     padding-right: 0px;
+    line-height: 0px;
+    padding-left: 0px;
   }
 
-  .footer_content_sp {
+  .footer_content {
     max-width: 767px;
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* margin: 0 auto; */
-    height: 322px;
+    height: 0px;
   }
 
-  .footer_logo_sp {
-    padding: 41px 128px 0 0;
+  .footer_logo {
+    padding: 41px 128px 0 20px;
     text-align: center;
-    width: 277px;
+    width: 226px;
   }
 
-  .footer_items_sp {
+  .footer_items {
     padding-top: 28px;
     font-feature-settings: "palt"; /*メトリクス*/
+    font-size: 18px;
   }
 
-  .footer_items_sp p {
+  .footer_items p {
+    padding-left: 20px;
     line-height: 30px;
   }
 
-  #CAFE_sp {
-    bottom: 0px;
-    text-align: center;
+  #CAFE {
     font-size: 18px;
+    padding: 0 0 27px 84px;
+    left: 0;
+  }
+
+  /*-------------------スマホPAGE TOP----------------------*/
+
+  .page_top {
+    width: 100px;
+    position: fixed; /*固定位置に*/
+    bottom: 205px; /*下からの距離 */
+    right: 12px; /*右からの距離 */
+    cursor: pointer;
+  }
+
+  /*----------------スマホslick画像のカルーセル表示-------------------*/
+
+  .slick-next {
+    right: 8%;
+  }
+
+  .slick-prev {
+    left: 8%;
   }
 }
