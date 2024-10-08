@@ -180,13 +180,13 @@
             </div>
         </picture>
 
-        <div class="gallery_items_sp">
+        <!-- <div class="gallery_items_sp">
             <img src="./images/mobile_gallery-100.jpg" alt="GALLERY_picture3_sp">
             <img src="./images/pc_gallary_05-100.jpg" alt="GALLERY_picture1_sp">
             <img src="./images/pc_gallary_04-100.jpg" alt="GALLERY_picture2_sp">
             <img src="./images/pc_gallary_02-100.jpg" alt="GALLERY_picture4_sp">
             <img src="./images/pc_gallary_01-100.jpg" alt="GALLERY_picture5_sp">
-        </div>
+        </div> -->
 
 
 
@@ -248,10 +248,10 @@
                     〒150-0022<br>
                     東京都渋谷区東京南123デザインビルB1<br>
                     MAIL：info@designcafe.tokyo</p>
-                <span id="CAFE">© 2021 DESIGN CAFE</span>
             </div>
 
         </div>
+        <div class="CAFE">© 2021 DESIGN CAFE</div>
 
     </section>
 
@@ -290,22 +290,48 @@
 
 
 
+        // $('.gallery_items').slick({
+        //     dots: true,
+        //     // infinite: false,
+
+        //     speed: 300,
+        //     slidesToShow: 5,
+        //     slidesToScroll: 1,
+        //     autoplay: true,
+        //     autoplaySpeed: 5000,
+
+        // });
+
+        // $('.gallery_items_sp').slick({
+        //     autoplay: true,
+        //     autoplaySpeed: 5000,
+        //     dots: true,
+        // });
+
+
         $('.gallery_items').slick({
             dots: true,
-            // infinite: false,
-
+            infinite: false,
             speed: 300,
             slidesToShow: 5,
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 5000,
+            responsive: [
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: true
 
-        });
+                    }
+                },
 
-        $('.gallery_items_sp').slick({
-            autoplay: true,
-            autoplaySpeed: 5000,
-            dots: true,
+                // 指定したブレイクポイントでslickを無効化するには
+                // オブジェクトの代わりに settings: "unslick" を指定します。
+            ]
         });
 
     </script>

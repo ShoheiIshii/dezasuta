@@ -330,7 +330,7 @@ li:last-child {
 
 .footer {
   background-color: #fff;
-  height: 393px;
+  /* height: 393px; */
   font-size: 20px;
   padding: 0 10px 0 10px;
 }
@@ -350,21 +350,20 @@ li:last-child {
 }
 
 .footer_items {
-  padding-top: 78px;
+  padding-top: 82px;
   font-feature-settings: "palt"; /*メトリクス*/
 }
 
 .footer_items p {
   line-height: 39px;
+  padding-bottom: 94px;
 }
 
-#CAFE {
-  position: relative;
-  /* bottom: 50px; */
-  top: 74px;
-  left: 124px;
+.CAFE {
   font-size: 16px;
-  line-height: 35px;
+  text-align: center;
+  /* height: 74px; paddingではなくこっちでもできる*/
+  padding-bottom: 74px;
 }
 
 /*-------------------PAGE TOP----------------------*/
@@ -496,7 +495,7 @@ li:last-child {
 /*----------------slick画像のカルーセル表示-------------------*/
 
 .slick-dots {
-  bottom: 20px;
+  bottom: 10px;
 }
 
 .slick-dots li.slick-active button:before,
@@ -786,9 +785,9 @@ li:last-child {
   /*-------------------スマホFOOTER----------------------*/
 
   .footer {
-    padding-right: 0px;
-    line-height: 0px;
-    padding-left: 0px;
+    padding-right: initial;
+    line-height: initial;
+    padding-left: initial;
   }
 
   .footer_content {
@@ -796,7 +795,7 @@ li:last-child {
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* margin: 0 auto; */
-    height: 0px;
+    /* height: 0px; */
   }
 
   .footer_logo {
@@ -813,13 +812,13 @@ li:last-child {
 
   .footer_items p {
     padding-left: 20px;
+    padding-bottom: 40px;
     line-height: 30px;
   }
 
-  #CAFE {
+  .CAFE {
     font-size: 18px;
-    padding: 0 0 27px 84px;
-    left: 0;
+    padding-bottom: 27px;
   }
 
   /*-------------------スマホPAGE TOP----------------------*/
